@@ -21,13 +21,17 @@ for (let i = 0; i < navLinks.length; i++) {
 }
 
 /**
- * header scroll active state
+ * header scroll active state & go to top
  */
+
+const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
     if (this.window.scrollY >= 100) {
         header.classList.add("active");
+        goTopBtn.classList.add("active");
     } else {
         header.classList.remove("active");
+        goTopBtn.classList.remove("active");
     }
 })
